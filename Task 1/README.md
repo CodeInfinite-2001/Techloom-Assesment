@@ -1,5 +1,7 @@
 # Deployement Link : http://pos-order-inventory-system-production-5e56.up.railway.app/
 
+
+
 # 🚀 Concurrency-Safe POS Order & Inventory System
 
 A production-grade, concurrency-safe Point-of-Sale (POS) system built with **Express.js**, **PostgreSQL**, and a modern **React (Vite + Tailwind CSS)** frontend. 
