@@ -1,6 +1,9 @@
 # Deployement Link : 
 http://e-commerce-checkout-payment-system-production.up.railway.app/
 
+Admin Username : admin@cyberstore.io
+Password : admin123
+
 # CYBERSTORE // Next-Gen Checkout & Payment Engine
 
 An end-to-end e-commerce store and payment resilience simulation built with **Node.js, Express, React (Vite)**, and **Tailwind CSS**. Designed with a **futuristic Black & Neon Green glassmorphism aesthetic** and architected for **zero-configuration 1-click deployment on Railway**.
