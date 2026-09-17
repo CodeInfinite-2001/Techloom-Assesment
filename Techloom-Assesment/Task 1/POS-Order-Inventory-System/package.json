@@ -1,0 +1,19 @@
+{
+  "name": "pos-order-inventory-system",
+  "version": "1.0.0",
+  "description": "Concurrency-Safe POS Backend & Frontend with Stock Reservation, Mock Payments, and Order Lifecycle",
+  "main": "server/src/server.js",
+  "scripts": {
+    "start": "node server/src/server.js",
+    "build": "cd client && node node_modules/vite/bin/vite.js build",
+    "install:all": "npm --prefix client install && npm --prefix server install",
+    "server": "node server/src/server.js",
+    "client": "cd client && node node_modules/vite/bin/vite.js",
+    "build:client": "cd client && node node_modules/vite/bin/vite.js build",
+    "test": "node server/node_modules/jest/bin/jest.js --runInBand --forceExit --rootDir server",
+    "simulate": "node server/scripts/simulateConcurrency.js 20 5"
+  },
+  "keywords": ["pos", "concurrency", "inventory", "postgresql", "express", "react"],
+  "author": "Antigravity",
+  "license": "ISC"
+}

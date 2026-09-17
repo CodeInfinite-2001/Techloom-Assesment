@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: pos_app
+    restart: always
+    ports:
+      - "5000:5000"
+    environment:
+      - NODE_ENV=production
+      - PORT=5000
+      - DATABASE_URL=postgres://pos_user:pos_password@db:5432/pos_system
+      - JWT_SECRET=pos-concurrency-safe-secret-key-987654321
+      - RESERVATION_DURATION_SEC=300
+      - EXPIRY_WORKER_INTERVAL_MS=5000
+    depends_on:
+      - db
+
+  db:
+    image: postgres:16-alpine
+    container_name: pos_postgres
+    restart: always
+    environment:
+      - POSTGRES_USER=pos_user
+      - POSTGRES_PASSWORD=pos_password
+      - POSTGRES_DB=pos_system
+    ports:
+      - "5432:5432"
+    volumes:
+      - pg-data:/var/lib/postgresql/data
+
+volumes:
+  pg-data:

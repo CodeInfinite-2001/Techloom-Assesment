@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: pos-order-inventory-system
+    env: node
+    plan: free
+    buildCommand: npm run build:client && cd server && npm install
+    startCommand: node server/src/server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: RESERVATION_DURATION_SEC
+        value: 300
+      - key: EXPIRY_WORKER_INTERVAL_MS
+        value: 5000
