@@ -1,6 +1,10 @@
 # Deployement Link : 
 http://pos-order-inventory-system-production-5e56.up.railway.app/
 
+Admin Username : admin
+
+Password : admin123
+
 
 
 # 🚀 Concurrency-Safe POS Order & Inventory System
